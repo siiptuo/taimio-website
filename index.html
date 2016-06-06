@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Taimio</title>
+        <style>
+body {
+    background-color: #45679f;
+    color: #afe9c6;
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 27px;
+    padding: 1em;
+}
+section {
+    width: 50%;
+    float: left;
+}
+h1, h2 {
+    color: white;
+}
+header {
+    display: flex;
+    align-items: center;
+    align-content: middle;
+}
+header h1 {
+    flex-grow: 1;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+header h1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #00d455;
+    border-radius: 50%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 0.25em;
+}
+.btn {
+    background-color: #00d455;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+    opacity: 0.9;
+}
+a {
+    color: #00d455;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+a:hover {
+    opacity: 0.9;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Taimio</h1>
+            <a class="btn" href="https://app.taim.io">Go to application</a>
+        </header>
+        <section>
+            <h2>Time tracking</h2>
+            <p>Track everything from work and school to hobbies. Improve your time management.</p>
+        </section>
+        <section>
+            <h2>Open source</h2>
+            <p>Taimio is free and open source software released under MIT license. Follow development on <a href="https://github.com/siiptuo/taimio-api">GitHub.</a></p>
+        </section>
+        <section>
+            <h2>Hosting</h2>
+            <p>Everyone is welcome to use Taimio here at <a href="https://app.taim.io">app.taim.io</a> for free but private self-hosting is always possible.</p>
+        </section>
+        <section>
+            <h2>REST API</h2>
+            <p>Taimio provides a comprehensive REST API for creating new client applications and scripts for reporting to other systems. Your data will never be locked in Taimio.</p>
+        </section>
+    </body>
+</html>
