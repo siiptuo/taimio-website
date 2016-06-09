@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Taimio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
 body {
     background-color: #45679f;
@@ -12,10 +13,6 @@ body {
     font-size: 17px;
     line-height: 27px;
     padding: 1em;
-}
-section {
-    width: 50%;
-    float: left;
 }
 h1, h2 {
     color: white;
@@ -28,6 +25,7 @@ header {
 header h1 {
     flex-grow: 1;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
 }
 header h1::before {
     content: '';
@@ -47,6 +45,7 @@ header h1::before {
     text-decoration: none;
     padding: 0.5em 1em;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 .btn:hover {
     opacity: 0.9;
@@ -58,6 +57,38 @@ a {
 a:hover {
     opacity: 0.9;
 }
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+    margin-top: 1em;
+}
+section {
+    width: 50%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+section h2 {
+    margin-top: 0;
+}
+section p:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    section {
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        align-self: flex-start;
+        margin-bottom: 0.5em;
+    }
+    header .btn {
+        align-self: stretch;
+    }
+}
         </style>
     </head>
     <body>
@@ -65,21 +96,23 @@ a:hover {
             <h1>Taimio</h1>
             <a class="btn" href="https://app.taim.io">Go to application</a>
         </header>
-        <section>
-            <h2>Time tracking</h2>
-            <p>Track everything from work and school to hobbies. Improve your time management.</p>
-        </section>
-        <section>
-            <h2>Open source</h2>
-            <p>Taimio is free and open source software released under MIT license. Follow development on <a href="https://github.com/siiptuo/taimio-api">GitHub.</a></p>
-        </section>
-        <section>
-            <h2>Hosting</h2>
-            <p>Everyone is welcome to use Taimio here at <a href="https://app.taim.io">app.taim.io</a> for free but private self-hosting is always possible.</p>
-        </section>
-        <section>
-            <h2>REST API</h2>
-            <p>Taimio provides a comprehensive REST API for creating new client applications and scripts for reporting to other systems. Your data will never be locked in Taimio.</p>
-        </section>
+        <div class="sections">
+            <section>
+                <h2>Time tracking</h2>
+                <p>Track everything from work and school to hobbies. Improve your time management.</p>
+            </section>
+            <section>
+                <h2>Open source</h2>
+                <p>Taimio is free and open source software released under MIT license. Follow development on <a href="https://github.com/siiptuo/taimio-api">GitHub.</a></p>
+            </section>
+            <section>
+                <h2>Hosting</h2>
+                <p>Everyone is welcome to use Taimio here at <a href="https://app.taim.io">app.taim.io</a> for free but private self-hosting is always possible.</p>
+            </section>
+            <section>
+                <h2>REST API</h2>
+                <p>Taimio provides a comprehensive REST API for creating new client applications and scripts for reporting to other systems. Your data will never be locked in Taimio.</p>
+            </section>
+        </div>
     </body>
 </html>
