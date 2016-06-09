@@ -20,23 +20,13 @@ h1, h2 {
 header {
     display: flex;
     align-items: center;
-    align-content: middle;
+    justify-content: space-between;
 }
-header h1 {
-    flex-grow: 1;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
-    margin: 0;
-}
-header h1::before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.5em;
-    height: 1.5em;
-    background-color: #00d455;
-    border-radius: 50%;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 0.25em;
+header img {
+    font-size: 2em;
+    height: 2em;
+    line-height: 2em;
+    font-weight: bold;
 }
 .btn {
     background-color: #00d455;
@@ -81,8 +71,7 @@ section p:last-child {
     header {
         flex-direction: column;
     }
-    header h1 {
-        align-self: flex-start;
+    header img {
         margin-bottom: 0.5em;
     }
     header .btn {
@@ -93,7 +82,7 @@ section p:last-child {
     </head>
     <body>
         <header>
-            <h1>Taimio</h1>
+            <img src="taimio.svg" alt="Taimio">
             <a class="btn" href="https://app.taim.io">Go to application</a>
         </header>
         <div class="sections">
